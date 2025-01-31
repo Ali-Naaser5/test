@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: "cairo",serif;
+    font-family: "cairo", serif;
     text-align: center;
     background: linear-gradient(to right, #E0F7FA, #64B5F6);
     margin: 0;
@@ -15,6 +15,7 @@ header {
     border-bottom: 3px solid #1976D2;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 /* دا التعديل بتاع الصورة */
 img {
     width: 250px;
@@ -22,13 +23,14 @@ img {
     margin-top: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s;
 }
+
 /* الانيميشن بتاع الصورة */
-img:hover {
+img:hover, img:focus {
     transform: scale(1.2);
     box-shadow: 0 0 20px rgba(25, 118, 210, 0.9);
 }
 
-/* زرار ارسال ال cv  */
+/* زرار ارسال ال cv */
 .cv-button {
     display: inline-block;
     margin-top: 15px;
@@ -41,33 +43,35 @@ img:hover {
     transition: 0.3s;
 }
 
-.cv-button:hover {
+.cv-button:hover, .cv-button:focus {
     color: #1565C0;
     background-color: white;
     box-shadow: 0 0 20px rgba(25, 118, 210, 0.9);
 }
 
-/* الجزء الخاص بالمعلومات الشخصيه  */
-.met{
+/* الجزء الخاص بالمعلومات الشخصيه */
+.met {
     text-decoration: none;
     color: #1565C0;
     font-weight: bold;
 }
-.met:hover{
+.met:hover, .met:focus {
     text-decoration: none;
     color: rgb(171, 199, 255);
     font-weight: bold;
 }
-.ieee{
+
+.ieee {
     text-decoration: none;
     color: #1565C0;
     font-weight: bold;
 }
-.ieee:hover{
+.ieee:hover, .ieee:focus {
     text-decoration: none;
-    color:rgb(171, 199, 255);
+    color: rgb(171, 199, 255);
     font-weight: bold;
 }
+
 .separator::before {
     content: "||";
     margin: 0 10px;
@@ -92,22 +96,22 @@ section {
     display: flex;
     justify-content: center;
     gap: 25px;
-    flex-wrap: wrap; /* يسمح للعناصر بالانتقال للسطر التالي عند الحاجة */
+    flex-wrap: wrap;
 }
 
 .project {
     background: white;
     padding: 15px;
     border-radius: 10px;
-    width: 90%; /* جعل العرض مرنًا بحيث يتناسب مع الشاشة */
-    max-width: 250px; /* أقصى عرض عند الشاشات الكبيرة */
+    width: 90%;
+    max-width: 250px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     color: #1E3A5F;
-    text-align: center; /* توسيط النصوص */
+    text-align: center;
 }
 
-.project:hover {
+.project:hover, .project:focus {
     transform: translateY(-9px);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
@@ -115,17 +119,14 @@ section {
 /* تحسين العرض على الشاشات الصغيرة */
 @media (max-width: 600px) {
     .projects {
-        flex-direction: column; /* جعل العناصر تحت بعضها */
-        align-items: center; /* توسيط العناصر */
+        flex-direction: column;
+        align-items: center;
     }
-    
+
     .project {
-        width: 80%; /* جعل العرض متكيفًا مع الشاشة */
+        width: 80%;
     }
 }
-
-
-
 
 #project-gallery {
     text-align: center;
@@ -166,11 +167,11 @@ section {
     transition: opacity 0.3s ease;
 }
 
-.gallery-item:hover .project-info {
+.gallery-item:hover .project-info, .gallery-item:focus .project-info {
     opacity: 1;
 }
 
-.gallery-item:hover .project-img {
+.gallery-item:hover .project-img, .gallery-item:focus .project-img {
     transform: scale(1.1);
 }
 
@@ -186,13 +187,13 @@ button.prev, button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgb(25, 118, 210,0.3);
+    background: rgb(25, 118, 210, 0.3);
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
     border-radius: 50%;
-    z-index: 10; 
+    z-index: 10;
 }
 
 button.prev {
@@ -203,10 +204,9 @@ button.next {
     right: 10px;
 }
 
-button.prev:hover, button.next:hover {
-    background: rgb(25, 118, 210 ,0.9);
+button.prev:hover, button.next:hover, button.prev:focus, button.next:focus {
+    background: rgb(25, 118, 210, 0.9);
 }
-
 
 /* Footer */
 footer {
@@ -234,7 +234,7 @@ footer a {
     transition: color 0.3s, text-shadow 0.3s;
 }
 
-footer a:hover {
+footer a:hover, footer a:focus {
     color: #1565C0;
     text-shadow: 0 0 10px #64B5F6;
 }
@@ -256,19 +256,24 @@ footer a::after {
     white-space: nowrap;
 }
 
-footer a:hover::after {
+footer a:hover::after, footer a:focus::after {
     opacity: 1;
     bottom: -45px;
 }
 
-footer a {
-    color: #1976D2;
-    font-size: 32px;
-    transition: color 0.3s, text-shadow 0.3s;
-    margin: 10px;
-}
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    footer a {
+        font-size: 24px;
+        margin: 5px;
+    }
 
-footer a:hover {
-    color: #1565C0;
-    text-shadow: 0 0 10px #64B5F6;
+    footer a::after {
+        font-size: 14px;
+        bottom: -30px;
+    }
+
+    footer a:hover::after, footer a:focus::after {
+        bottom: -40px;
+    }
 }
