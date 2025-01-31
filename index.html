@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon website -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- cairo font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:slnt,wght@-11..11,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- استدعاء المكتبة للايقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- كود الاسكربت للانيميشن -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const text = "Hello, I'm Ali Abdelnaser ";
+            let i = 0;
+            function typeEffect() {
+                if (i < text.length) {
+                    document.getElementById("typing-text").innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeEffect, 100);
+                }
+            }
+            typeEffect();
+        });
+    </script>
+</head>
+<!-- بداية الصفحة  -->
+<body>
+    <!-- الجزء الغلوي وبداية المعلومات الشخصيه زي صورتي وكلمة الترحيب بتاعت الاسم الي معمولة بالجافا  -->
+    <header>
+        <h1 id="typing-text"></h1>
+        <img src="imges/photo9.jpg" alt="My Profile Picture">
+        <br>
+        <a href="imges/cv.pdf" download class="cv-button">Download My CV</a>
+    </header>
+    <!-- الجزء الثاني الي فيه شوية معلومات عني  -->
+    <section>
+        <h2>About Me</h2>
+        <p>My name is Ali Abdenaser ibrahim , and I am a student at 
+            <a class="met" href="https://www.engmet.edu.eg/" target="_blank"> MET </a> in Mansoura,Egypt.
+        </p>
+        <p>
+            <span>Level 1 CCE</span>
+            <span class="separator"></span>
+            <span>Mobile Developer (Flutter)</span>
+            <span class="separator"></span>
+            <a class="ieee" target="_blank" href="https://www.facebook.com/share/15f6WU7GbG/">Member in IEEE MET SB</a>
+        </p>
+        
+    </section>
+
+
+    <section>
+        <h2>My Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>S M P</h3>
+                <p>sales management program made in C# that includes a login interface for users and is linked to a database <br> 
+                    <a href="https://drive.google.com/file/d/1LiTMzmcATmwhViR85pk-rfF7Tby53nrm/view?usp=drivesdk" target="_blank" style="color: #1565C0 ; font-weight: bolder; text-decoration: none;"> Preview... </a>
+                </p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p></p>
+            </div>
+            <div class="project">
+                <h3>Project 3</h3>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    <section id="project-gallery">
+    <h2> Events</h2>
+    <div class="slider">
+        <button class="prev">&#10094;</button>
+        <div class="slide-container">
+           
+            <div class="gallery-item">
+                <img src="imges/photo8.jpg" alt="Project 1" class="project-img">
+                <div class="project-info">
+                    <p class="project-name">Oreantaion Day</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imges/photo1.jpg" alt="Project 1" class="project-img">
+                <div class="project-info">
+                    <p class="project-name">IEEE Hodie</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="imges/photo2.jpg" alt="Project 1" class="project-img">
+                <div class="project-info">
+                    <p class="project-name">Booth Day</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="imges/photo3.jpg" alt="Project 1" class="project-img">
+                <div class="project-info">
+                    <p class="project-name">Presentation</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="imges/photo4.jpg" alt="Project 1" class="project-img">
+                <div class="project-info">
+                    <p class="project-name">Registration</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="imges/photo5.jpg" alt="Project 1" class="project-img">
+                <div class="project-info">
+                    <p class="project-name">ID</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imges/photo7.jpg" alt="Project 1" class="project-img">
+                <div class="project-info">
+                    <p class="project-name">CCE Event 2025</p>
+                </div>
+            </div>
+        </div>
+        <button class="next">&#10095;</button>
+    </div>
+</section>
+
+    
+
+    <footer>
+        <h2 class="Contact">Contact</h2>
+        <ul>
+            <li><a href="https://www.facebook.com/profile.php?id=61565298802043&mibextid=ZbWKwL" target="_blank" data-username="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+            <!-- <li><a href="https://twitter.com/yourprofile" target="_blank" data-username="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li> -->
+            <li><a href="https://www.linkedin.com/in/ali-abdelnaser-947230295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" data-username="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/Ali-Abdelnaser" target="_blank" data-username="GitHub"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="mailto:alinaserhema60@gmail.com" target="_blank" data-username="Email Me"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="https://wa.me/+201068643407" target="_blank" data-username="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+        </ul>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
