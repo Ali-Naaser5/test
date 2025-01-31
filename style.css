@@ -92,22 +92,38 @@ section {
     display: flex;
     justify-content: center;
     gap: 25px;
+    flex-wrap: wrap; /* يسمح للعناصر بالانتقال للسطر التالي عند الحاجة */
 }
 
 .project {
     background: white;
     padding: 15px;
     border-radius: 10px;
-    width: 200px;
+    width: 90%; /* جعل العرض مرنًا بحيث يتناسب مع الشاشة */
+    max-width: 250px; /* أقصى عرض عند الشاشات الكبيرة */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     color: #1E3A5F;
+    text-align: center; /* توسيط النصوص */
 }
 
 .project:hover {
     transform: translateY(-9px);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
+
+/* تحسين العرض على الشاشات الصغيرة */
+@media (max-width: 600px) {
+    .projects {
+        flex-direction: column; /* جعل العناصر تحت بعضها */
+        align-items: center; /* توسيط العناصر */
+    }
+    
+    .project {
+        width: 80%; /* جعل العرض متكيفًا مع الشاشة */
+    }
+}
+
 
 
 
